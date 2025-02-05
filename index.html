@@ -6,14 +6,135 @@
     <title>pet-shop</title>
     <!-- Tailwin-cdn link -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- sora-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- ADlam Display font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+
+    <style>
+        .sora-font {
+        font-family: "Sora", serif;
+    }
+
+        .adlam-display-font {
+        font-family: "ADLaM Display", serif;
+    }
+    </style>
 
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="bg-[#FFF9F4] boder border-2 border-gray-400 py-2.5 md:border-0" >
+            <div class="md:px-36 flex items-center justify-between sora-font">
+                <div class="pl-4  md:pl-0 flex items-center justify-between gap-2">
+                    <img src="/images/logo-header.png" alt="#">
+                    <h4 class="hidden md:block text-lg">Browse <span class="text-[#FFDC26]">4</span> Pets</h4>
+                </div>
+                <div>
+                    <ul class="hidden md:flex items-center gap-5 text-base">
+                        <li>Find a pet</li>
+                        <li>Breeds</li>
+                        <li>Contact us </li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden md:block size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                      </svg>
+                      
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden md:block size-6">
+                        <path stroke-linecap="round " stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                      </svg>
+
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-4 size-8 md:hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                      </svg>
+                      
+                    <button class="hidden md:block text-base py-2 px-7 border-solid border-2 border-[#FFDC26] rounded-lg">Login</button>
+                    <button class="hidden md:block text-base py-2 px-8 bg-[#FFDC26] rounded-lg">Register</button>
+                </div>
+            </div>
         </nav>
+        <!-- start banner part -->
+         <div class=" mt-16 md:px-36">
+            <div class="h-[85vh] bg-[url('/images/cat-big.png')] bg-right-bottom bg-contain bg-no-repeat">
+                <div  class="px-4 font-normal z-10 space-y-4 ">
+                    <h1 class="adlam-display-font text-3xl  md:text-6xl">
+                        Pamper Your Pet,<br> Because They Deserve <br>the Bes
+                    </h1>
+                    <p class="sora-font text-base md:text-xl text-slate-500">Discover a world of treats, toys, and essentials handpicked for <br> your furry friends. Shop now and make tails wag with joy!</p>
+                    <button class="text-base py-2 px-7 bg-[#FFDC26] rounded-lg">Find a pet</button>
+                </div>
+            </div>
+         </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <!-- Categories section  -->
+         <!-- <section class="pb-28 px-4 md:px-36">
+                <h4 class="adlam-display-font text-4xl mt-32 mb-10">Browse By Categories</h4>
+                <div class=" gap-5 grid grid-cols-2">
+                    <div class="px-10 py-8 bg-[#F9DF8A] rounded-lg flex items-center justify-center flex-col ">
+                            <img class="px-8 py-8 bg-white rounded-full" src="images/dog-cartoon.png" alt="#">
+                            <h3 class="pt-6 adlam-display-font text-xl">Dog</h3>
+                            <p class="pt-3 sora-font text-base">3 items</p>
+                    </div>
+                    <div class="px-10 py-8 bg-[#F9DF8A] rounded-lg flex items-center justify-center flex-col ">
+                        <img class="px-8 py-8 bg-white rounded-full" src="images/fish-cartoon.png" alt="#">
+                        <h3 class="pt-6 adlam-display-font text-xl">Fish</h3>
+                        <p class="pt-3 sora-font text-base">3 items</p>
+                    </div>
+                    <div class="px-10 py-8 bg-[#F9DF8A] rounded-lg flex items-center justify-center flex-col ">
+                        <img class="px-8 py-8 bg-white rounded-full" src="images/cat-cartoon.png" alt="#">
+                        <h3 class="pt-6 adlam-display-font text-xl">Cat</h3>
+                        <p class="pt-3 sora-font text-base">3 items</p>
+                    </div>
+                    <div class="px-10 py-8 bg-[#F9DF8A] rounded-lg flex items-center justify-center flex-col ">
+                        <img class="px-8 py-8 bg-white rounded-full" src="images/bird-cartoon.png" alt="#">
+                        <h3 class="pt-6 adlam-display-font text-xl">Birds</h3>
+                        <p class="pt-3 sora-font text-base">3 items</p>
+                
+                    </div>
+                    <div class="px-10 py-8 bg-[#F9DF8A] rounded-lg flex items-center justify-center flex-col ">
+                        <img class="px-8 py-8  bg-white rounded-full" src="images/mouse-cartoon.png" alt="#">
+                        <h3 class="pt-6 adlam-display-font text-xl">Small pet</h3>
+                        <p class="pt-3 sora-font text-base">3 items</p>
+                    </div>
+                    <div class="px-10 py-8 bg-[#F9DF8A] rounded-lg flex items-center justify-center flex-col ">
+                        <img class="px-8 py-8 bg-white rounded-full" src="images/rabbit-cartoon.png" alt="#">
+                        <h3 class="pt-6 adlam-display-font text-xl">Rabit</h3>
+                        <p class="pt-3 sora-font text-base">3 items</p>
+                    </div>
+                </div>
+         </section> -->
+         <!-- Trending Pet Products section -->
+          <!-- <section class="bg-[#FFF9F4] pb-28 px-36">
+            <div>
+                <h4 class="adlam-display-font text-4xl mt-32 mb-10">Everyday low Price</h4>
+                <div>
+                    <div class="bg-[#F9DF8A] rounded-lg p-5">
+                        <h3 class="py-3 adlam-display-font text-xl">T-Shirt For Dogs</h3>
+                        <p class="py-3 sora-font text-sm">Discover is a world of treats, toy,and essentials handpicked </p>
+                        <button class="text-base py-2 px-7 bg-white rounded-lg">Shop Now</button>
+                        <img src="/images/cute-pet-small.png" alt="#">
+                    </div>
+                    <div>
+                         <div>
+                            <div><img src="" alt="">
+                            </div>
+                            <div></div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+          </section> -->
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
